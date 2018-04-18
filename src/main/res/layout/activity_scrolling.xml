@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ScrollingActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/coverphoto"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_scrolling" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/civProfilePic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/sundarpichai"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="3dp"
+        android:elevation="5dp"
+        android:layout_marginBottom="50dp"
+        app:layout_collapseMode="parallax"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="center" />
+
+<!--
+    <android.support.design.widget.AppBarLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00ffffff"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/civProfilePic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/sundarpichai"
+                app:civ_border_color="#ffffff"
+                app:civ_border_width="3dp"
+                android:elevation="5dp"
+                android:layout_marginBottom="50dp"
+                app:layout_collapseMode="parallax"
+                app:layout_anchor="@id/app_bar"
+                app:layout_anchorGravity="center" />
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+-->
+
+    <!--<include-->
+    <!--android:id="@+id/photoHeader"-->
+    <!--layout="@layout/photo_header"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_anchor="@id/linerMainCard"-->
+    <!--app:layout_anchorGravity="top|center"/>-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/linerMainCard"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginTop="100dp">-->
+
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/constraintCard1"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/profile_background"-->
+    <!--android:paddingBottom="16dp">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtName"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="32dp"-->
+    <!--android:fontFamily="sans-serif"-->
+    <!--android:text="Rajiv Ramdev"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:textSize="24sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtAddress"-->
+    <!--android:layout_width="300dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/txtName"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:fontFamily="sans-serif-medium"-->
+    <!--android:lines="2"-->
+    <!--android:text="Shaligram House Behind Rajpath Club Offside,Ahmedabad, Gujarat 380059"-->
+    <!--android:textAllCaps="false"-->
+    <!--android:textSize="16sp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txtName" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtParentDetails"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--android:fontFamily="sans-serif-light"-->
+    <!--android:text="Parent Details:"-->
+    <!--android:textSize="16sp"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txtAddress" />-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rvContacts"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/txtParentDetails" />-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+
+    <!--<android.support.constraint.ConstraintLayout-->
+    <!--android:id="@+id/constraintCard2"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/profile_background"-->
+    <!--android:elevation="2dp"-->
+    <!--android:layout_marginTop="8dp">-->
+
+    <!--<android.support.v7.widget.RecyclerView-->
+    <!--android:id="@+id/rvOtherFields"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:layout_marginLeft="8dp"-->
+    <!--android:layout_marginRight="8dp"-->
+    <!--android:layout_marginStart="8dp"-->
+    <!--app:layout_constraintEnd_toEndOf="parent"-->
+    <!--app:layout_constraintStart_toStartOf="parent"/>-->
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+    <!--<include-->
+    <!--android:id="@+id/constraintCard3"-->
+    <!--layout="@layout/card_attendence_analysis"-->
+    <!--android:background="@drawable/profile_background"/>-->
+
+    <!--<include-->
+    <!--android:id="@+id/constraintCard4"-->
+    <!--layout="@layout/card_exam_analysis"-->
+    <!--android:background="@drawable/profile_background"/>-->
+    <!--</LinearLayout>-->
+
+
+</android.support.design.widget.CoordinatorLayout>
